@@ -1,12 +1,12 @@
 package com.theironyard;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by michaeldelli-gatti on 6/22/16.
  */
+@Entity
+@Table(name = "customer")
 public class Customer {
 
     @Id

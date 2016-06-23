@@ -1,17 +1,16 @@
 package com.theironyard;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * Created by michaeldelli-gatti on 6/22/16.
  */
+@Entity
+@Table(name = "purchase")
 public class Purchase {
     @Id
     @GeneratedValue
-    int customerId;
+    int id;
 
     @Column(nullable = false)
     String date;
@@ -28,6 +27,8 @@ public class Purchase {
     @ManyToOne
     Customer customer;
 
+    public Purchase() {
+    }
 
     public Purchase(String date, String creditCard, String cvv, String category, Customer customer) {
         this.date = date;
